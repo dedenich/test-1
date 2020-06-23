@@ -1,0 +1,147 @@
+@font-face {
+  font-family: FuturaBookC;
+  src: url('./asserts/fonts/FuturaBookC_Regular.woff2')
+      format('woff2');         
+}
+
+@font-face {
+  font-family: FuturaDemiC;
+  src: url('./asserts/fonts/FuturaDemiC.woff2')
+      format('woff2');         
+}
+
+html {
+  font-size: 10px;
+  font-family: FuturaBookC;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: none;
+}
+
+.header {
+  height: 90px;
+  font-size: 1.6rem;
+  font-family: FuturaDemiC;
+  color: #444444;
+}
+
+.header-container {
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__controls,
+.header__nav-container,
+.header__navigation>ul {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  margin: auto 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  color: #333333;
+}
+
+h1::after,
+.header__navigation ul:last-child::after,
+form[name="header__search"]::after {
+  margin: 0 40px;
+  content: "|";
+  opacity: 0.2;
+  color: #000000;
+}
+
+form[name="header__lang-switcher"] {
+  display: flex;
+  flex-direction: row;
+}
+
+form[name="header__lang-switcher"] label {
+  display: block;
+  margin: auto 10px auto 0;
+  height: 28px;
+  width: 45px;
+  text-align: center;
+  line-height: 30px;
+}
+
+form[name="header__lang-switcher"] input {
+  display: none;
+}
+
+form[name="header__lang-switcher"] input:checked+label {
+  background-color: rgba(74, 100, 36, 0.1);
+  border-radius: 5px;
+}
+
+.header__navigation ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header__navigation ul li {
+  display: block;
+  margin: auto 40px auto 0;
+  list-style: none;
+}
+
+.header__navigation>ul>li>a {
+  color: #444444;
+  text-decoration: none;
+}
+
+.header__navigation>ul>li>a:visited {
+  color: #444444;
+}
+
+.header__navigation ul:last-child::after {
+  margin: auto 0;
+}  
+
+form[name="header__search"] {
+  display: block;
+  height: 90px;
+}
+
+.header-button {
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.header__search_initial {
+  height: 20px;
+  width: 20px;
+  margin: 35px 20px;
+}
+
+form[name="header__search"]::after {
+  margin: 0;
+  position: relative;
+  bottom: 4.5px;
+  font-size: 1.6rem;
+}
+
+.header__menu_initial {
+  margin-left: 40px;
+}
