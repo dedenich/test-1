@@ -17,3 +17,12 @@ document.querySelectorAll('#menu-list li a').forEach((it) => {
     if (div) menu.removeChild(div);
   });
 })
+
+const searchSensitive = document.querySelectorAll('.search-sensitive');
+const searchButton = document.getElementById('header-search-button');
+
+searchButton.addEventListener('click', (evt) => {
+  searchSensitive.forEach((it) => it.classList.toggle('search-displayed'));
+  document.getElementById('search-input').classList.toggle('visually-hidden');
+  searchButton.classList.toggle('clicked');
+})
