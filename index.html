@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body id="body">
+<body class="menu-sensitive" id="body">
   <header class="header">
     <div class="wrapper">
       <div class="header-container">
@@ -23,7 +23,7 @@
           </form>
         </div>
         <div class="header__nav-container">
-          <nav class="header__navigation">
+          <nav class="header__navigation    menu-sensitive">
             <ul>
               <li><a href="#">About us</a></li>
               <li><a href="#">Architecture</a></li>
@@ -32,7 +32,7 @@
               <li><a href="#">Shop</a></li>
             </ul>
           </nav>
-          <form action="#" name="header__search">
+          <form action="#" name="header__search" class="header__search menu-sensitive">
             <input type="search" class="visually-hidden">
             <button type="button" class="header__search_initial header-button">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,18 +40,23 @@
               </svg>
             </button>
           </form>
-          <button type="button" class="header__menu_initial header-button">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <button type="button" class="header__menu_initial menu-sensitive header-button" id="header__menu-button">
+            <svg class="initial" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.812479 8.12499H25.1875C25.636 8.12499 25.9999 7.76096 25.9999 7.31251C25.9999 6.86399 25.6359 6.50003 25.1875 6.50003H0.812479C0.363961 6.50003 0 6.86406 0 7.31251C0 7.76096 0.364028 8.12499 0.812479 8.12499Z" fill="#444444"/>
               <path d="M25.1875 12.1875H0.812479C0.363961 12.1875 0 12.5516 0 13C0 13.4484 0.364028 13.8125 0.812479 13.8125H25.1875C25.636 13.8125 25.9999 13.4484 25.9999 13C25.9999 12.5516 25.636 12.1875 25.1875 12.1875Z" fill="#444444"/>
               <path d="M25.1875 17.875H8.93748C8.48896 17.875 8.125 18.239 8.125 18.6875C8.125 19.136 8.48903 19.5 8.93748 19.5H25.1875C25.636 19.5 25.9999 19.1359 25.9999 18.6875C26 18.239 25.636 17.875 25.1875 17.875Z" fill="#444444"/>
-            </svg>    
+            </svg>
+            <span class="on-menu">Close</span>
+            <svg class="on-menu" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.72353 19.1629L18.9592 1.92715C19.2764 1.61 19.2763 1.09523 18.9592 0.778132C18.6421 0.460982 18.1273 0.461028 17.8102 0.778132L0.574509 18.0138C0.257359 18.331 0.257407 18.8458 0.57451 19.1629C0.891612 19.48 1.40643 19.48 1.72353 19.1629Z" fill="#444444"/>
+              <path d="M18.9591 17.8102L1.72344 0.574509C1.40628 0.257359 0.891522 0.257404 0.574423 0.574502C0.257325 0.891601 0.257328 1.40641 0.57443 1.72351L17.8101 18.9592C18.1273 19.2764 18.6421 19.2763 18.9591 18.9592C19.2762 18.6421 19.2763 18.1274 18.9591 17.8102Z" fill="#444444"/>
+            </svg>   
           </button>
         </div>
       </div>
     </div>
   </header>
-  <main class="swiper-container" id="swiper-container">
+  <main class="swiper-container menu-sensitive" id="swiper-container"> 
     <div class="wrapper swiper-wrapper">
       <section class="swiper-slide" style="height: 720px;">
         <h2 class="slide__heading">Harmony</h2>
@@ -151,10 +156,19 @@
     <div class="swiper-scrollbar" id="scrollbar"></div>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   </main>
-  <div id="pag"></div>
+  <div class="menu-sensitive" id="pag"></div>
+  <div class="menu__contents menu-sensitive">
+    <menu class="menu__list" id="menu-list">
+      <li data-src="./asserts/hover-img-1.png"><a data-src="./asserts/hover-img-1.png" href="#">About Us</a></li>
+      <li data-src="./asserts/hover-img-2.png"><a data-src="./asserts/hover-img-1.png" href="#">Interior</a></li>
+      <li data-src="./asserts/hover-img-1.png"><a  data-src="./asserts/hover-img-1.png" href="#"  href="#">Architecture</a></li>
+      <li data-src="./asserts/hover-img-2.png"><a  data-src="./asserts/hover-img-1.png" href="#" href="#">Portfolio</a></li>
+      <li data-src="./asserts/hover-img-1.png"><a  data-src="./asserts/hover-img-1.png" href="#" href="#">Contact</a></li>
+    </menu>
+  </div>
   <footer class="footer">
     <div class="wrapper">
-      <div class="footer__contents">
+      <div class="footer__contents menu-sensitive">
         <address>
           <ul>
             <li><a href="#">Facebook</a></li>
@@ -166,5 +180,6 @@
     </div>
   </footer>
   <script src="./swiper.js"></script>
+  <script src="./index.js"></script>
 </body>
 </html>

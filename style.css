@@ -112,13 +112,15 @@ form[name="header__lang-switcher"] input:checked+label {
 }
 
 .header__navigation>ul>li>a,
-.footer__contents ul>li>a {
+.footer__contents ul>li>a,
+menu>li>a {
   color: #444444;
   text-decoration: none;
 }
 
 .header__navigation>ul>li>a:visited,
-.footer__contents ul>li>a:visited {
+.footer__contents ul>li>a:visited,
+menu>li>a:visited {
   color: #444444;
 }
 
@@ -328,4 +330,90 @@ form[name="header__search"]::after {
 
 .footer__contents ul>li {
   margin-right: 35px;
+}
+
+.menu__contents {
+  display: none;
+}
+
+.menu__contents.menu-displayed {
+  display: block;
+  width: 100%;
+  height: 640px;
+}
+
+.menu__list {
+  margin-top: 136px;
+  padding: 0;
+  list-style: none;
+  color: #444444;
+  font-family: Playfair Display;
+  font-style: normal;
+  font-size: 4.8rem;
+  line-height: 64px;
+  text-align: center;
+}
+
+.menu__list li:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.footer__contents.menu-displayed address {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
+}
+
+#body.menu-displayed {
+  background-image: url(./asserts/bg-menu.png);
+}
+
+.header__navigation.menu-displayed,
+.header__search.menu-displayed,
+main.menu-displayed,
+#pag.menu-displayed,
+.header__menu_initial.menu-displayed svg.initial,
+.header__menu_initial svg.on-menu,
+.header__menu_initial span.on-menu {
+  display: none;
+}
+
+.header__menu_initial.menu-displayed svg.on-menu,
+.header__menu_initial.menu-displayed span.on-menu {
+  display: inline;
+  transition: ease-in 0.3s;
+}
+
+span.on-menu {
+  position: relative;
+  bottom: 6px;
+  padding-right: 10px;
+  font-family: FuturaDemiC;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+#menu-list .menu__onHover-image {
+  position: absolute;
+  width: 217px;
+  height: 316px;
+}
+
+#menu-list .menu__onHover-image:nth-child(1),
+#menu-list .menu__onHover-image:nth-child(3),
+#menu-list .menu__onHover-image:nth-child(5) {
+  left: 20vw;
+  transform: rotate(4.35deg);
+}
+
+#menu-list .menu__onHover-image:nth-child(2),
+#menu-list .menu__onHover-image:nth-child(4) {
+  right: 20vw;
+  transform: rotate(-5.66deg);
+}
+
+#menu-list .menu__onHover-image:nth-child(4),
+#menu-list .menu__onHover-image:nth-child(5) {
+  bottom: 10vh;
 }
